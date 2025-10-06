@@ -11,20 +11,21 @@
 ---
 
 ## 🛠️ Tecnologias e Ferramentas
-![JavaScript](https://img.shields.io/badge/-JavaScript-05122A?style=flat&logo=javascript)
-![Node.js](https://img.shields.io/badge/-Node.js-05122A?style=flat&logo=node.js)
-![Playwright](https://img.shields.io/badge/-Playwright-05122A?style=flat&logo=microsoft-edge)
-![Git](https://img.shields.io/badge/-Git-05122A?style=flat&logo=git)
-![Linux](https://img.shields.io/badge/-Linux-05122A?style=flat&logo=linux)
-![VSCode](https://img.shields.io/badge/-VSCode-05122A?style=flat&logo=visual-studio-code)
-![PHP](https://img.shields.io/badge/-PHP-05122A?style=flat&logo=php)
+![JavaScript](https://img.shields.io/badge/-JavaScript-8dc647?style=for-the-badge&logo=javascript&logoColor=white)
+![Node.js](https://img.shields.io/badge/-Node.js-8dc647?style=for-the-badge&logo=node.js&logoColor=white)
+![Playwright](https://img.shields.io/badge/-Playwright-8dc647?style=for-the-badge&logo=microsoft-edge&logoColor=white)
+![Git](https://img.shields.io/badge/-Git-8dc647?style=for-the-badge&logo=git&logoColor=white)
+![Linux](https://img.shields.io/badge/-Linux-8dc647?style=for-the-badge&logo=linux&logoColor=white)
+![VSCode](https://img.shields.io/badge/-VSCode-8dc647?style=for-the-badge&logo=visual-studio-code&logoColor=white)
+![PHP](https://img.shields.io/badge/-PHP-8dc647?style=for-the-badge&logo=php&logoColor=white)
 
 ---
 
 ## 📊 Estatísticas
-![GitHub Stats](https://github-readme-stats.vercel.app/api?username=hiramsonnormil&show_icons=true&theme=tokyonight)
-![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=hiramsonnormil&layout=compact&theme=tokyonight)
+![GitHub Stats](https://github-readme-stats.vercel.app/api?username=hiramsonnormil&show_icons=true&theme=dracula)
+![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=hiramsonnormil&layout=compact&theme=dracula)
 
+---
 
 📫 **Conecte-se comigo:**  
-[![LinkedIn](https://img.shields.io/badge/-LinkedIn-05122A?style=flat&logo=linkedin)](www.linkedin.com/in/hiramson-normil-4b988025a)
+[![LinkedIn](https://img.shields.io/badge/-LinkedIn-8dc647?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/hiramson-normil-4b988025a)
