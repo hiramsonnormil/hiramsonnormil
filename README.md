@@ -6,7 +6,7 @@
 ## 🧠 Sobre mim
 - 🎓 Estudante no **4º trimestre da faculdade**, Curso **Analise e Desenvolvimento de sistemas**
 - 🧩 Experiência prática em **QA e testes automatizados (Playwright,Appium)**
-- ⚡ Atualmente aprofundando meu estudos em **Node.js**, e **arquitetura de software**
+- ⚡ Atualmente aprofundando meus estudos em **Node.js**, e **arquitetura de software**
 - 🎯 Objetivo: unir **qualidade, automação e desenvolvimento** em projetos reais
 
 ---
