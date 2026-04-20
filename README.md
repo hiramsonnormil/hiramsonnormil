@@ -1,4 +1,4 @@
-Estudante de Análise e Desenvolvimento de Sistemas (4º semestre), atuando no desenvolvimento de sistemas e engenharia de qualidade. Com foco no ecossistema Node.js e PHP, busco unir o desenvolvimento de funcionalidades à uma mentalidade orientada a testes.
+Estudante de Ti , atuando no desenvolvimento de sistemas e engenharia de qualidade. Com foco no ecossistema Node.js e PHP, busco unir o desenvolvimento de funcionalidades à uma mentalidade orientada a testes.
 
 experiencia em automação com Playwright e Appium para assegurar estabilidade operacional e performance em aplicações Web e Mobile.
 
