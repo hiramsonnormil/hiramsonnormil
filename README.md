@@ -29,6 +29,10 @@ A results-driven Quality Assurance Engineer and Software Developer with 3+ years
   * **Testability & Front-end Integration:** Pioneered the implementation of unique QA hooks (`data-testid`) directly within **Vue.js** and **React** components. This architectural initiative decoupled test scripts from styling changes, reducing test flakiness and maintenance overhead across the entire front-end application.
   * **Web & Mobile Automation:** Leveraged **Playwright** and **Appium** to build and sustain automated E2E and regression testing suites, ensuring operational stability and cross-platform performance for web and mobile channels.
   * **Full-Stack Mentality:** Bridged the gap between backend systems (Node.js/PHP) and continuous quality, fostering a strong test-driven development (TDD) culture within the engineering squad.
+ 
+  * Legacy System Migration & Regression Testing:** Actively participated in a massive architectural migration at Rentcars, moving a legacy monolithic platform from PHP 4/5 to PHP 7.4. 
+* **Quality Assurance & Risk Mitigation:** Designed and executed comprehensive regression test strategies to guarantee feature parity, preventing production outages and ensuring a seamless transition with zero downtime for global users.
+
 
 ---
 
