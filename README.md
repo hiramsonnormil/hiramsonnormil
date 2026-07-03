@@ -44,4 +44,4 @@ A results-driven Quality Assurance Engineer and Software Developer with 3+ years
 ### 📫 Connect with Me
 
 * **LinkedIn:** [linkedin.com/in/hiramson-normil-4b988025a](https://linkedin.com)
-* **Email:** [seu-email@provedor.com](mailto:seu-email@provedor.com)
+* **Email:** [hiramsonnormil00@gmail.com](mailto:hiramsonnormil00@gmail.com)
