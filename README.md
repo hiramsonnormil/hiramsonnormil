@@ -1,26 +1,47 @@
-Estudante de Ti , atuando no desenvolvimento de sistemas e engenharia de qualidade. Com foco no ecossistema Node.js e PHP, busco unir o desenvolvimento de funcionalidades à uma mentalidade orientada a testes.
+# Hi, I'm Hiramson Normil 👋
 
-experiencia em automação com Playwright e Appium para assegurar estabilidade operacional e performance em aplicações Web e Mobile.
+### QA Automation Engineer | Software Engineer | Node.js • Playwright • Appium
 
-Tecnologias e Stacks
-Desenvolvimento Backend
-Linguagems: node Js, php 
+A results-driven Quality Assurance Engineer and Software Developer with 3+ years of experience bridging the gap between system development and test automation. Specialized in the Node.js and PHP ecosystems, I combine a robust engineering mindset with test-driven methodologies to deliver stable, high-performance Web and Mobile applications.
 
-Bancos de Dados: MySQL, MongoDb
+---
 
-Qualidade e Automação (QA)
-Ferramentas: Appim, Playwright
+### 🛠️ Tech Stack & Expertise
 
-Cultura: CI/CD básico, Testes Unitários e E2E
+**Quality Assurance & Automation**
+* **Frameworks:** Playwright, Appium, Selenium
+* **Methodologies:** E2E Testing, Unit Testing, Integration Testing, TDD, BDD
+* **API Testing:** Postman, SuperTest, REST APIs
 
-Infraestrutura e Ferramentas
-Ambiente: Ubuntu/Debian, VS Code
+**Backend Development & Databases**
+* **Languages:** Node.js (JavaScript/TypeScript), PHP
+* **Databases:** MySQL, MongoDB
 
-Estatísticas
+**DevOps & Infrastructure**
+* **CI/CD & Tools:** GitHub Actions, Git, Docker
+* **Environments:** Linux (Ubuntu/Debian), VS Code
+
+---
+
+### 🚀 Professional Impact & Key Achievements
+
+* 🌐 **Rentcars (Global Car Rental Platform)**
+  * **Testability & Front-end Integration:** Pioneered the implementation of unique QA hooks (`data-testid`) directly within **Vue.js** and **React** components. This architectural initiative decoupled test scripts from styling changes, reducing test flakiness and maintenance overhead across the entire front-end application.
+  * **Web & Mobile Automation:** Leveraged **Playwright** and **Appium** to build and sustain automated E2E and regression testing suites, ensuring operational stability and cross-platform performance for web and mobile channels.
+  * **Full-Stack Mentality:** Bridged the gap between backend systems (Node.js/PHP) and continuous quality, fostering a strong test-driven development (TDD) culture within the engineering squad.
+
+---
+
+### 📊 GitHub Stats
+
 <p align="center">
 <img height="180em" src="https://github-readme-stats.vercel.app/api?username=hiramsonnormil&show_icons=true&theme=tokyonight&include_all_commits=true&count_private=true"/>
 <img height="180em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=hiramsonnormil&layout=compact&theme=tokyonight"/>
 </p>
 
-Contato
-LinkedIn: linkedin.com/in/hiramson-normil-4b988025a
+---
+
+### 📫 Connect with Me
+
+* **LinkedIn:** [linkedin.com/in/hiramson-normil-4b988025a](https://linkedin.com)
+* **Email:** [seu-email@provedor.com](mailto:seu-email@provedor.com)
