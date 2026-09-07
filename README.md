@@ -1,51 +1,68 @@
+<!--
+  README de perfil — github.com/hiramsonnormil
+  Isso vai no repositório especial "hiramsonnormil/hiramsonnormil" (o que tem o mesmo
+  nome do seu usuário) para aparecer na sua página de perfil do GitHub.
+
+  Antes de publicar:
+  - Quando conseguir uma vaga, troque a linha "Atualmente aberto a novas oportunidades".
+  - Vale enriquecer as descrições dos projetos com 1 frase real de cada um.
+-->
+
 # Hi, I'm Hiramson Normil 👋
 
-### QA Automation Engineer | Software Engineer | Node.js • Playwright • Appium
+### QA Automation Engineer | Software Engineer | Node.js · Playwright · PHP
 
-A results-driven Quality Assurance Engineer and Software Developer with 3+ years of experience bridging the gap between system development and test automation. Specialized in the Node.js and PHP ecosystems, I combine a robust engineering mindset with test-driven methodologies to deliver stable, high-performance Web and Mobile applications.
+QA Automation Engineer e Software Engineer com 3+ anos de experiência unindo automação de testes e desenvolvimento de produto. Especializado nos ecossistemas Node.js e PHP, combino uma mentalidade de engenharia com metodologias orientadas a testes para entregar aplicações Web e Mobile estáveis e de alta performance.
+
+**🎯 Atualmente aberto a novas oportunidades** como QA Automation Engineer, SDET ou Desenvolvedor — ampliando minha atuação de QA para desenvolvimento full-stack.
 
 ---
 
 ### 🛠️ Tech Stack & Expertise
 
-**Quality Assurance & Automation**
-* **Frameworks:** Playwright, Appium, Selenium
-* **Methodologies:** E2E Testing, Unit Testing, Integration Testing, TDD, BDD
-* **API Testing:** Postman, SuperTest, REST APIs
+**Quality Assurance & Automação**
+- **Frameworks:** Playwright, Appium, Selenium
+- **Metodologias:** E2E Testing, Unit Testing, Integration Testing, TDD, BDD
+- **API Testing:** Postman, SuperTest, REST APIs
 
-**Backend Development & Databases**
-* **Languages:** Node.js (JavaScript/TypeScript), PHP
-* **Databases:** MySQL, MongoDB
+**Desenvolvimento Backend & Bancos de Dados**
+- **Linguagens:** Node.js (JavaScript/TypeScript), PHP
+- **Bancos de dados:** MySQL, MongoDB
 
-**DevOps & Infrastructure**
-* **CI/CD & Tools:** GitHub Actions, Git, Docker
-* **Environments:** Linux (Ubuntu/Debian), VS Code
+**DevOps & Infraestrutura**
+- **CI/CD & Ferramentas:** GitHub Actions, Git, Docker
+- **Ambientes:** Linux (Ubuntu/Debian), VS Code
 
 ---
 
-### 🚀 Professional Impact & Key Achievements
+### 🚀 Experiência & Conquistas
 
-* 🌐 **Rentcars (Global Car Rental Platform)**
-  * **Testability & Front-end Integration:** Pioneered the implementation of unique QA hooks (`data-testid`) directly within **Vue.js** and **React** components. This architectural initiative decoupled test scripts from styling changes, reducing test flakiness and maintenance overhead across the entire front-end application.
-  * **Web & Mobile Automation:** Leveraged **Playwright** and **Appium** to build and sustain automated E2E and regression testing suites, ensuring operational stability and cross-platform performance for web and mobile channels.
-  * **Full-Stack Mentality:** Bridged the gap between backend systems (Node.js/PHP) and continuous quality, fostering a strong test-driven development (TDD) culture within the engineering squad.
- 
-  * Legacy System Migration & Regression Testing:** Actively participated in a massive architectural migration at Rentcars, moving a legacy monolithic platform from PHP 4/5 to PHP 7.4. 
-* **Quality Assurance & Risk Mitigation:** Designed and executed comprehensive regression test strategies to guarantee feature parity, preventing production outages and ensuring a seamless transition with zero downtime for global users.
+**🌐 Rentcars** — Plataforma global de aluguel de carros
 
+- **Testabilidade & Integração Front-end:** implementei hooks de QA (`data-testid`) diretamente em componentes Vue.js e React, desacoplando os scripts de teste de mudanças visuais e reduzindo flakiness e esforço de manutenção em toda a aplicação front-end.
+- **Automação Web & Mobile:** construí e mantive suítes de testes E2E e de regressão com Playwright e Appium, garantindo estabilidade operacional e performance cross-platform para os canais web e mobile.
+- **Mentalidade Full-Stack:** conectei sistemas de backend (Node.js/PHP) com qualidade contínua, fomentando uma cultura de TDD dentro do time de engenharia.
+- **Migração de Sistema Legado:** participei de uma migração arquitetural de grande porte, movendo uma plataforma monolítica legada de PHP 4/5 para PHP 7.4, com estratégias de regressão que garantiram paridade de funcionalidades e zero downtime.
+
+---
+
+### 💻 Projetos
+
+- **[TabnewsClone](https://github.com/hiramsonnormil/TabnewsClone)** — clone da plataforma TabNews, para praticar arquitetura full-stack.
+- **[github_info_user](https://github.com/hiramsonnormil/github_info_user)** — buscador de informações de usuário do GitHub (ID, foto, seguidores, bio, data de criação da conta).
+- **[todo_list](https://github.com/hiramsonnormil/todo_list)** — aplicação de gerenciamento de tarefas.
+- **[ExpertBooking](https://github.com/hiramsonnormil/ExpertBooking)** — sistema de agendamento/reservas com EJS e Node.js.
 
 ---
 
 ### 📊 GitHub Stats
 
-<p align="center">
-<img height="180em" src="https://github-readme-stats.vercel.app/api?username=hiramsonnormil&show_icons=true&theme=tokyonight&include_all_commits=true&count_private=true"/>
-<img height="180em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=hiramsonnormil&layout=compact&theme=tokyonight"/>
-</p>
+![GitHub Stats](https://github-readme-stats.vercel.app/api?username=hiramsonnormil&show_icons=true&theme=tokyonight)
+![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=hiramsonnormil&layout=compact&theme=tokyonight)
 
 ---
 
-### 📫 Connect with Me
+### 📫 Contato
 
-* **LinkedIn:** [linkedin.com/in/hiramson-normil-4b988025a](https://linkedin.com)
-* **Email:** [hiramsonnormil00@gmail.com](mailto:hiramsonnormil00@gmail.com)
+- **LinkedIn:** [linkedin.com/in/hiramson-normil-4b988025a](https://www.linkedin.com/in/hiramson-normil-4b988025a)
+- **E-mail:** hiramsonnormil00@gmail.com
