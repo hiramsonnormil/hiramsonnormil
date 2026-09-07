@@ -1,0 +1,839 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hiramson Normil — QA Automation Engineer & Software Engineer</title>
+    <meta name="description"
+        content="Hiramson Normil — QA Automation Engineer e Software Engineer, unindo automação de testes com desenvolvimento Node.js e PHP.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500;600&display=swap"
+        rel="stylesheet">
+    <style>
+        :root {
+            --bg: #F1F3EF;
+            --panel: #FBFCFA;
+            --ink: #17211B;
+            --ink-soft: #59685F;
+            --line: #D9DFD6;
+            --accent: #1F7A5C;
+            --accent-soft: #E4EFE9;
+            --warn: #B0532E;
+            --term-bg: #142019;
+            --term-ink: #DCE7DF;
+            --term-soft: #7C9186;
+            --radius-sm: 4px;
+            --radius-lg: 10px;
+            --maxw: 1120px;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            margin: 0;
+            background: var(--bg);
+            color: var(--ink);
+            font-family: 'Inter', system-ui, sans-serif;
+            font-size: 16px;
+            line-height: 1.55;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        h1,
+        h2,
+        h3 {
+            font-family: 'Space Grotesk', 'Inter', sans-serif;
+            margin: 0;
+            letter-spacing: -0.01em;
+        }
+
+        .mono {
+            font-family: 'IBM Plex Mono', monospace;
+        }
+
+        a {
+            color: inherit;
+        }
+
+        .wrap {
+            max-width: var(--maxw);
+            margin: 0 auto;
+            padding: 0 28px;
+        }
+
+        .tag-label {
+            display: inline-block;
+            font-family: 'IBM Plex Mono', monospace;
+            font-size: 13px;
+            color: var(--ink-soft);
+            margin-bottom: 14px;
+        }
+
+        .tag-label::before {
+            content: "// ";
+            color: var(--accent);
+        }
+
+        a:focus-visible,
+        button:focus-visible {
+            outline: 2px solid var(--accent);
+            outline-offset: 3px;
+            border-radius: 2px;
+        }
+
+        /* ---------- NAV ---------- */
+        header {
+            position: sticky;
+            top: 0;
+            z-index: 50;
+            background: rgba(241, 243, 239, 0.86);
+            backdrop-filter: blur(8px);
+            border-bottom: 1px solid var(--line);
+        }
+
+        nav.wrap {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 64px;
+        }
+
+        .brand {
+            font-family: 'Space Grotesk', sans-serif;
+            font-weight: 600;
+            font-size: 17px;
+            text-decoration: none;
+        }
+
+        .navlinks {
+            display: flex;
+            gap: 26px;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .navlinks a {
+            text-decoration: none;
+            font-size: 14px;
+            color: var(--ink-soft);
+            transition: color .15s ease;
+        }
+
+        .navlinks a:hover {
+            color: var(--ink);
+        }
+
+        @media (max-width: 640px) {
+            .navlinks {
+                gap: 14px;
+            }
+
+            .navlinks a {
+                font-size: 12.5px;
+            }
+        }
+
+        /* ---------- HERO ---------- */
+        .hero {
+            padding: 64px 0 48px;
+        }
+
+        .hero-grid {
+            display: grid;
+            grid-template-columns: 1.05fr 0.95fr;
+            gap: 56px;
+            align-items: start;
+        }
+
+        @media (max-width: 900px) {
+            .hero-grid {
+                grid-template-columns: 1fr;
+                gap: 36px;
+            }
+        }
+
+        .hero h1 {
+            font-size: clamp(38px, 5.6vw, 58px);
+            font-weight: 700;
+        }
+
+        .hero .role {
+            margin-top: 10px;
+            font-size: 18px;
+            color: var(--ink-soft);
+            max-width: 480px;
+        }
+
+        .badges {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-top: 22px;
+        }
+
+        .badge {
+            font-family: 'IBM Plex Mono', monospace;
+            font-size: 12.5px;
+            padding: 5px 10px;
+            border: 1px solid var(--line);
+            border-radius: var(--radius-sm);
+            color: var(--ink-soft);
+            background: var(--panel);
+        }
+
+        .cta-row {
+            display: flex;
+            gap: 12px;
+            margin-top: 30px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            display: inline-block;
+            text-decoration: none;
+            padding: 11px 18px;
+            border-radius: var(--radius-sm);
+            font-size: 14.5px;
+            font-weight: 500;
+            transition: transform .15s ease, background .15s ease;
+        }
+
+        .btn-primary {
+            background: var(--ink);
+            color: var(--bg);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-1px);
+        }
+
+        .btn-ghost {
+            border: 1px solid var(--line);
+            color: var(--ink);
+            background: transparent;
+        }
+
+        .btn-ghost:hover {
+            border-color: var(--ink-soft);
+        }
+
+        /* terminal */
+        .terminal {
+            background: var(--term-bg);
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            box-shadow: 0 18px 40px -20px rgba(20, 32, 25, 0.45);
+        }
+
+        .term-bar {
+            display: flex;
+            gap: 6px;
+            align-items: center;
+            padding: 12px 14px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+        }
+
+        .term-dot {
+            width: 9px;
+            height: 9px;
+            border-radius: 50%;
+            background: rgba(220, 231, 223, 0.28);
+        }
+
+        .term-body {
+            padding: 20px 20px 24px;
+            font-family: 'IBM Plex Mono', monospace;
+            font-size: 13.5px;
+            color: var(--term-ink);
+            min-height: 260px;
+        }
+
+        .term-line {
+            opacity: 0;
+            transform: translateY(4px);
+            transition: opacity .35s ease, transform .35s ease;
+            white-space: pre-wrap;
+            margin: 0 0 6px;
+        }
+
+        .term-line.show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .term-line .pass {
+            color: #6FCF9B;
+        }
+
+        .term-line .muted {
+            color: var(--term-soft);
+        }
+
+        .term-cmd {
+            color: var(--term-ink);
+        }
+
+        .term-cmd::before {
+            content: "$ ";
+            color: var(--term-soft);
+        }
+
+        .cursor {
+            display: inline-block;
+            width: 7px;
+            height: 14px;
+            background: var(--term-ink);
+            margin-left: 2px;
+            vertical-align: -2px;
+            animation: blink 1s steps(1) infinite;
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            .term-line {
+                transition: none;
+                opacity: 1;
+                transform: none;
+            }
+
+            .cursor {
+                animation: none;
+            }
+        }
+
+        @keyframes blink {
+            50% {
+                opacity: 0;
+            }
+        }
+
+        /* ---------- STATUS STRIP ---------- */
+        .strip {
+            border-top: 1px solid var(--line);
+            border-bottom: 1px solid var(--line);
+            padding: 18px 0;
+        }
+
+        .strip .wrap {
+            display: flex;
+            align-items: baseline;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
+        .strip .k {
+            font-family: 'IBM Plex Mono', monospace;
+            font-size: 13px;
+            color: var(--ink-soft);
+        }
+
+        .strip .v {
+            font-weight: 600;
+            color: var(--accent);
+        }
+
+        /* ---------- SECTIONS ---------- */
+        section {
+            padding: 72px 0;
+            border-bottom: 1px solid var(--line);
+        }
+
+        section:last-of-type {
+            border-bottom: none;
+        }
+
+        .section-head {
+            margin-bottom: 36px;
+            max-width: 640px;
+        }
+
+        .section-head h2 {
+            font-size: 28px;
+        }
+
+        /* trajetória */
+        .timeline {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            position: relative;
+        }
+
+        .timeline::before {
+            content: "";
+            position: absolute;
+            left: 7px;
+            top: 6px;
+            bottom: 6px;
+            width: 1px;
+            background: var(--line);
+        }
+
+        .t-item {
+            position: relative;
+            padding: 0 0 34px 34px;
+        }
+
+        .t-item:last-child {
+            padding-bottom: 0;
+        }
+
+        .t-item::before {
+            content: "";
+            position: absolute;
+            left: 2px;
+            top: 5px;
+            width: 11px;
+            height: 11px;
+            border-radius: 50%;
+            background: var(--panel);
+            border: 2px solid var(--accent);
+        }
+
+        .t-item.current::before {
+            background: var(--accent);
+        }
+
+        .t-version {
+            font-family: 'IBM Plex Mono', monospace;
+            font-size: 12.5px;
+            color: var(--accent);
+        }
+
+        .t-title {
+            font-size: 19px;
+            font-weight: 600;
+            margin: 4px 0 4px;
+        }
+
+        .t-meta {
+            font-size: 13.5px;
+            color: var(--ink-soft);
+            margin-bottom: 8px;
+        }
+
+        .t-desc {
+            color: var(--ink-soft);
+            max-width: 640px;
+        }
+
+        /* stack */
+        .code-block {
+            background: var(--term-bg);
+            color: var(--term-ink);
+            border-radius: var(--radius-lg);
+            padding: 26px 28px;
+            font-family: 'IBM Plex Mono', monospace;
+            font-size: 13.5px;
+            overflow-x: auto;
+            line-height: 1.7;
+        }
+
+        .ck {
+            color: #8FB7A6;
+        }
+
+        .cs {
+            color: #E3B98C;
+        }
+
+        .cp {
+            color: var(--term-soft);
+        }
+
+        /* projetos */
+        .project-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 18px;
+        }
+
+        @media (max-width: 700px) {
+            .project-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .project-card {
+            border: 1px solid var(--line);
+            border-radius: var(--radius-lg);
+            padding: 24px;
+            background: var(--panel);
+        }
+
+        .project-card h3 {
+            font-size: 18px;
+            margin-bottom: 8px;
+        }
+
+        .project-card p {
+            color: var(--ink-soft);
+            font-size: 14.5px;
+            margin: 0 0 16px;
+            min-height: 44px;
+        }
+
+        .project-foot {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
+        .link-ext {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 13.5px;
+            color: var(--accent);
+        }
+
+        /* sobre */
+        .about-text {
+            max-width: 660px;
+            font-size: 16.5px;
+            color: var(--ink-soft);
+        }
+
+        .about-text strong {
+            color: var(--ink);
+            font-weight: 600;
+        }
+
+        /* contato / footer */
+        footer {
+            padding: 56px 0 40px;
+        }
+
+        .foot-grid {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            flex-wrap: wrap;
+            gap: 24px;
+        }
+
+        .foot-links {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .foot-links a {
+            text-decoration: none;
+            font-size: 14.5px;
+            color: var(--ink-soft);
+        }
+
+        .foot-links a:hover {
+            color: var(--ink);
+        }
+
+        .foot-meta {
+            font-family: 'IBM Plex Mono', monospace;
+            font-size: 12.5px;
+            color: var(--ink-soft);
+            text-align: right;
+        }
+
+        .foot-note {
+            margin-top: 34px;
+            padding-top: 20px;
+            border-top: 1px solid var(--line);
+            font-size: 12.5px;
+            color: var(--ink-soft);
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <nav class="wrap">
+            <a href="#top" class="brand">Hiramson Normil</a>
+            <ul class="navlinks">
+                <li><a href="#trajetoria">Trajetória</a></li>
+                <li><a href="#stack">Stack</a></li>
+                <li><a href="#projetos">Projetos</a></li>
+                <li><a href="#sobre">Sobre</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="top">
+
+        <!-- HERO -->
+        <section class="hero" style="border:none;">
+            <div class="wrap hero-grid">
+                <div>
+                    <span class="tag-label">qa & dev</span>
+                    <h1>Hiramson Normil</h1>
+                    <p class="role">QA Automation Engineer e Software Engineer — unindo automação de testes com
+                        desenvolvimento Node.js e PHP.</p>
+
+                    <div class="badges">
+                        <span class="badge">Playwright</span>
+                        <span class="badge">Appium</span>
+                        <span class="badge">Node.js</span>
+                        <span class="badge">PHP</span>
+                    </div>
+
+                    <div class="cta-row">
+                        <a class="btn btn-primary" href="#projetos">Ver projetos</a>
+                        <a class="btn btn-ghost" href="mailto:hiramsonnormil00@gmail.com">Falar comigo</a>
+                    </div>
+                </div>
+
+                <div class="terminal" aria-hidden="true">
+                    <div class="term-bar">
+                        <span class="term-dot"></span><span class="term-dot"></span><span class="term-dot"></span>
+                    </div>
+                    <div class="term-body">
+                        <p class="term-line term-cmd">node server.js</p>
+                        <p class="term-line"><span class="pass">✓</span> servidor rodando em <span
+                                class="muted">:3000</span></p>
+                        <p class="term-line muted">&nbsp;</p>
+                        <p class="term-line term-cmd">npx playwright test --project=chromium</p>
+                        <p class="term-line"><span class="pass">✓</span> auth/login.spec.ts <span
+                                class="muted">(1.2s)</span></p>
+                        <p class="term-line"><span class="pass">✓</span> checkout/payment-flow.spec.ts <span
+                                class="muted">(2.1s)</span></p>
+                        <p class="term-line"><span class="pass">✓</span> search/filters-android.spec.ts <span
+                                class="muted">(0.9s)</span></p>
+                        <p class="term-line"><span class="pass">✓</span> api/reservations.spec.ts <span
+                                class="muted">(0.6s)</span></p>
+                        <p class="term-line muted">&nbsp;</p>
+                        <p class="term-line"><span class="pass">4 passed</span> <span class="muted">(4.8s)</span><span
+                                class="cursor"></span></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- STATUS -->
+        <div class="strip">
+            <div class="wrap">
+                <span class="k">status</span>
+                <span class="v">Aberto a novas oportunidades</span>
+                <span class="k">— QA Automation Engineer / Dev · Curitiba, PR</span>
+            </div>
+        </div>
+
+        <!-- TRAJETÓRIA -->
+        <section id="trajetoria">
+            <div class="wrap">
+                <div class="section-head">
+                    <span class="tag-label">trajetória</span>
+                    <h2>Do estágio à automação ponta a ponta</h2>
+                </div>
+
+                <ul class="timeline">
+                    <li class="t-item">
+                        <span class="t-version">v1.0.0</span>
+                        <p class="t-title">Estágio em QA</p>
+                        <p class="t-meta">Rentcars · Curitiba, PR</p>
+                        <p class="t-desc">Primeiros passos em testes manuais e automatizados, aprendendo a base do
+                            produto e os fluxos críticos de reserva.</p>
+                    </li>
+                    <li class="t-item">
+                        <span class="t-version">v2.0.0</span>
+                        <p class="t-title">QA Analyst</p>
+                        <p class="t-meta">Rentcars · Curitiba, PR · ~3 anos</p>
+                        <p class="t-desc">Suítes end-to-end com Playwright e Appium para Web e Mobile. Implementação de
+                            hooks de teste (<code>data-testid</code>) em componentes Vue.js e React, reduzindo flakiness
+                            e custo de manutenção. Participação na migração de um sistema legado de PHP 4/5 para PHP
+                            7.4, com testes de regressão que garantiram zero downtime.</p>
+                    </li>
+                    <li class="t-item current">
+                        <span class="t-version">v3.0.0 · atual</span>
+                        <p class="t-title">Em transição para desenvolvimento</p>
+                        <p class="t-meta">Aberto a novas oportunidades</p>
+                        <p class="t-desc">Ampliando atuação de QA para desenvolvimento de produto, unindo automação de
+                            testes a construção de features com Node.js e PHP.</p>
+                    </li>
+                    <li class="t-item">
+                        <span class="t-version">branch: formação</span>
+                        <p class="t-title">Análise e Desenvolvimento de Sistemas</p>
+                        <p class="t-meta">Uninter · em andamento</p>
+                        <p class="t-desc">Aprofundando fundamentos de engenharia de software — composição sobre herança,
+                            Page Objects, arquitetura de testes e de sistemas.</p>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- STACK -->
+        <section id="stack">
+            <div class="wrap">
+                <div class="section-head">
+                    <span class="tag-label">stack</span>
+                    <h2>Ferramentas do dia a dia</h2>
+                </div>
+
+                <pre class="code-block"><span class="cp">{</span>
+  <span class="ck">"qa_automação"</span><span class="cp">:</span> [<span class="cs">"Playwright"</span>, <span class="cs">"Appium"</span>, <span class="cs">"Selenium"</span>],
+  <span class="ck">"metodologias"</span><span class="cp">:</span> [<span class="cs">"E2E"</span>, <span class="cs">"TDD"</span>, <span class="cs">"BDD"</span>],
+  <span class="ck">"api"</span><span class="cp">:</span> [<span class="cs">"Postman"</span>, <span class="cs">"SuperTest"</span>],
+  <span class="ck">"linguagens"</span><span class="cp">:</span> [<span class="cs">"JavaScript"</span>, <span class="cs">"TypeScript"</span>, <span class="cs">"PHP"</span>, <span class="cs">"SQL"</span>],
+  <span class="ck">"backend"</span><span class="cp">:</span> [<span class="cs">"Node.js"</span>],
+  <span class="ck">"dados"</span><span class="cp">:</span> [<span class="cs">"MySQL"</span>, <span class="cs">"MongoDB"</span>],
+  <span class="ck">"devops"</span><span class="cp">:</span> [<span class="cs">"Docker"</span>, <span class="cs">"GitHub Actions"</span>, <span class="cs">"Git"</span>],
+  <span class="ck">"gestão"</span><span class="cp">:</span> [<span class="cs">"Jira"</span>]
+<span class="cp">}</span></pre>
+            </div>
+        </section>
+
+        <!-- PROJETOS -->
+        <section id="projetos">
+            <div class="wrap">
+                <div class="section-head">
+                    <span class="tag-label">projetos</span>
+                    <h2>Código fora do QA</h2>
+                </div>
+
+                <div class="project-grid">
+                    <div class="project-card">
+                        <h3>TabnewsClone</h3>
+                        <p>Clone da plataforma TabNews construído para praticar arquitetura full-stack.</p>
+                        <div class="project-foot">
+                            <span class="badge">JavaScript</span>
+                            <a class="link-ext" href="https://github.com/hiramsonnormil/TabnewsClone" target="_blank"
+                                rel="noopener">
+                                Ver no GitHub
+                                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2.4" aria-hidden="true">
+                                    <path d="M7 17L17 7M17 7H8M17 7V16" />
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <h3>github_info_user</h3>
+                        <p>Buscador de informações de usuário do GitHub — ID, foto, seguidores, bio e data de criação da
+                            conta.</p>
+                        <div class="project-foot">
+                            <span class="badge">CSS / JS</span>
+                            <a class="link-ext" href="https://github.com/hiramsonnormil/github_info_user"
+                                target="_blank" rel="noopener">
+                                Ver no GitHub
+                                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2.4" aria-hidden="true">
+                                    <path d="M7 17L17 7M17 7H8M17 7V16" />
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <h3>todo_list</h3>
+                        <p>Aplicação de gerenciamento de tarefas.</p>
+                        <div class="project-foot">
+                            <span class="badge">Node.js</span>
+                            <a class="link-ext" href="https://github.com/hiramsonnormil/todo_list" target="_blank"
+                                rel="noopener">
+                                Ver no GitHub
+                                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2.4" aria-hidden="true">
+                                    <path d="M7 17L17 7M17 7H8M17 7V16" />
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <h3>ExpertBooking</h3>
+                        <p>Sistema de agendamento/reservas construído com EJS e Node.js.</p>
+                        <div class="project-foot">
+                            <span class="badge">EJS</span>
+                            <a class="link-ext" href="https://github.com/hiramsonnormil/ExpertBooking" target="_blank"
+                                rel="noopener">
+                                Ver no GitHub
+                                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2.4" aria-hidden="true">
+                                    <path d="M7 17L17 7M17 7H8M17 7V16" />
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SOBRE -->
+        <section id="sobre">
+            <div class="wrap">
+                <div class="section-head">
+                    <span class="tag-label">sobre</span>
+                    <h2>Um pouco de contexto</h2>
+                </div>
+                <p class="about-text">
+                    Sou <strong>QA Automation Engineer e Software Engineer</strong>, baseado em Curitiba (PR), com cerca
+                    de três anos de
+                    experiência unindo desenvolvimento e automação de testes. Na Rentcars, construí e mantive suítes
+                    end-to-end com
+                    <strong>Playwright e Appium</strong> para Web e Mobile, implementei hooks de teste em componentes
+                    Vue.js e React,
+                    e participei da migração de um sistema legado de <strong>PHP 4/5 para PHP 7.4</strong> com testes de
+                    regressão que
+                    garantiram zero downtime. Hoje estou <strong>aberto a novas oportunidades</strong>, ampliando minha
+                    atuação de QA
+                    para desenvolvimento de produto com <strong>Node.js e PHP</strong>, e cursando Análise e
+                    Desenvolvimento de Sistemas
+                    na Uninter.
+                </p>
+            </div>
+        </section>
+
+    </main>
+
+    <footer id="contato">
+        <div class="wrap">
+            <div class="section-head" style="margin-bottom:24px;">
+                <span class="tag-label">contato</span>
+                <h2 style="font-size:24px;">Vamos conversar</h2>
+            </div>
+            <div class="foot-grid">
+                <div class="foot-links">
+                    <a href="mailto:hiramsonnormil00@gmail.com">hiramsonnormil00@gmail.com</a>
+                    <a href="https://www.linkedin.com/in/hiramson-normil-4b988025a" target="_blank"
+                        rel="noopener">LinkedIn</a>
+                    <a href="https://github.com/hiramsonnormil" target="_blank" rel="noopener">GitHub</a>
+                </div>
+                <div class="foot-meta">Curitiba, PR — Brasil<br>2026</div>
+            </div>
+            <p class="foot-note">Portfólio com estrutura inspirada em jrands.com, adaptado para QA e desenvolvimento.
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        (function () {
+            var lines = document.querySelectorAll('.term-line');
+            var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+            if (reduce) {
+                lines.forEach(function (l) { l.classList.add('show'); });
+                return;
+            }
+            lines.forEach(function (line, i) {
+                setTimeout(function () { line.classList.add('show'); }, 220 + i * 230);
+            });
+        })();
+    </script>
+
+</body>
+
+</html>
