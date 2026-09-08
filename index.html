@@ -840,6 +840,84 @@
                 setTimeout(function () { line.classList.add('show'); }, 220 + i * 230);
             });
         })();
+
+        (function () {
+            var translations = {
+                'nav a[href="#trajetoria"]': 'Career',
+                'nav a[href="#stack"]': 'Stack',
+                'nav a[href="#projetos"]': 'Projects',
+                'nav a[href="#sobre"]': 'About',
+                'nav a[href="#contato"]': 'Contact',
+                '.hero .tag-label': 'qa & dev',
+                '.hero .role': 'QA Automation Engineer and Software Engineer — combining test automation with Node.js and PHP development.',
+                '.hero .btn-primary': 'View projects',
+                '.hero .btn-ghost': 'Get in touch',
+                '.strip .k': 'status',
+                '.strip .v': 'Open to new opportunities',
+                '.strip .k:last-child': '— QA Automation Engineer / Developer · Brazil',
+                '#trajetoria .tag-label': 'career',
+                '#trajetoria h2': 'From internship to end-to-end automation',
+                '#trajetoria .t-item:nth-child(1) .t-title': 'QA Intern',
+                '#trajetoria .t-item:nth-child(1) .t-meta': 'Rentcars · Curitiba, Brazil',
+                '#trajetoria .t-item:nth-child(1) .t-desc': 'First steps in manual and automated testing, learning the product fundamentals and critical reservation flows.',
+                '#trajetoria .t-item:nth-child(2) .t-title': 'QA Analyst',
+                '#trajetoria .t-item:nth-child(2) .t-meta': 'Rentcars · Curitiba, Brazil · ~3 years',
+                '#trajetoria .t-item:nth-child(2) .t-desc': 'End-to-end suites with Playwright and Appium for Web and Mobile. Implemented test hooks (<code>data-testid</code>) in Vue.js and React components, reducing flakiness and maintenance costs. Participated in the migration of a legacy PHP 4/5 system to PHP 7.4, with regression tests that ensured zero downtime.',
+                '#trajetoria .t-item:nth-child(3) .t-version': 'v3.0.0 · current',
+                '#trajetoria .t-item:nth-child(3) .t-title': 'Open to Dev & QA opportunities',
+                '#trajetoria .t-item:nth-child(3) .t-meta': 'Brazil',
+                '#trajetoria .t-item:nth-child(3) .t-desc': 'Looking for new opportunities as a QA Automation Engineer or Developer — working across test automation and product development with Node.js and PHP.',
+                '#trajetoria .t-item:nth-child(4) .t-version': 'branch: education',
+                '#trajetoria .t-item:nth-child(4) .t-title': 'Systems Analysis and Development',
+                '#trajetoria .t-item:nth-child(4) .t-meta': 'Uninter · in progress',
+                '#trajetoria .t-item:nth-child(4) .t-desc': 'Deepening software engineering fundamentals — composition over inheritance, Page Objects, and test and systems architecture.',
+                '#stack .tag-label': 'stack',
+                '#stack h2': 'Tools I use every day',
+                '#projetos .tag-label': 'projects',
+                '#projetos h2': 'Code beyond QA',
+                '#sobre .tag-label': 'about',
+                '#sobre h2': 'A little context',
+                '#contato .tag-label': 'contact',
+                '#contato h2': 'Let\'s talk',
+                '.foot-meta': 'Curitiba, Brazil<br>2026'
+            };
+
+            var projectTranslations = [
+                ['Booking system built with EJS and Node.js.', 'Completed'],
+                ['Clone of the TabNews platform built to practice full-stack architecture.', 'JavaScript'],
+                ['GitHub user information finder — ID, photo, followers, bio, and account creation date.', 'CSS / JS'],
+                ['Task management application.', 'Node.js']
+            ];
+
+            function applyEnglish() {
+                Object.keys(translations).forEach(function (selector) {
+                    var element = document.querySelector(selector);
+                    if (element) element.innerHTML = translations[selector];
+                });
+
+                document.querySelector('#stack .code-block').innerHTML = '<span class="cp">{</span>\n  <span class="ck">"test_automation"</span><span class="cp">:</span> [<span class="cs">"Playwright"</span>, <span class="cs">"Appium"</span>, <span class="cs">"Selenium"</span>],\n  <span class="ck">"methodologies"</span><span class="cp">:</span> [<span class="cs">"E2E"</span>, <span class="cs">"TDD"</span>, <span class="cs">"BDD"</span>],\n  <span class="ck">"api"</span><span class="cp">:</span> [<span class="cs">"Postman"</span>, <span class="cs">"SuperTest"</span>],\n  <span class="ck">"languages"</span><span class="cp">:</span> [<span class="cs">"JavaScript"</span>, <span class="cs">"TypeScript"</span>, <span class="cs">"PHP"</span>, <span class="cs">"SQL"</span>],\n  <span class="ck">"backend"</span><span class="cp">:</span> [<span class="cs">"Node.js"</span>],\n  <span class="ck">"data"</span><span class="cp">:</span> [<span class="cs">"MySQL"</span>, <span class="cs">"MongoDB"</span>],\n  <span class="ck">"devops"</span><span class="cp">:</span> [<span class="cs">"Docker"</span>, <span class="cs">"GitHub Actions"</span>, <span class="cs">"Git"</span>],\n  <span class="ck">"management"</span><span class="cp">:</span> [<span class="cs">"Jira"</span>]\n<span class="cp">}</span>';
+
+                document.querySelectorAll('.project-card').forEach(function (card, index) {
+                    card.querySelector('p').textContent = projectTranslations[index][0];
+                    card.querySelector('.project-foot .badge').textContent = projectTranslations[index][1];
+                    card.querySelector('.link-ext').childNodes[0].textContent = ' View on GitHub';
+                });
+
+                document.querySelector('#sobre .about-text').innerHTML = 'Professional in <strong>QA Automation and Software Engineering</strong>, with around three years of experience combining software development and test automation.\n                    <br><br>\n                    At <strong>Rentcars</strong>, I built and maintained end-to-end test suites using <strong>Playwright and Appium</strong> for Web and Mobile applications. I also implemented test hooks in <strong>Vue.js and React</strong> components and participated in the migration of a legacy system from <strong>PHP 4/5 to PHP 7.4</strong>, developing regression tests that helped ensure <strong>zero downtime</strong> throughout the process.\n                    <br><br>\n                    I am currently <strong>looking for new opportunities as a QA Automation Engineer or Developer</strong>, with an interest in both automation and software quality as well as product development using <strong>Node.js and PHP</strong>.\n                    <br><br>\n                    I am studying <strong>Systems Analysis and Development at Uninter</strong>, continuously improving my skills and contributing to projects that value quality, technology, and sound development practices.';
+                document.querySelector('html').lang = 'en';
+                document.title = 'Hiramson Normil — QA Automation Engineer & Software Engineer';
+                document.querySelector('meta[name="description"]').content = 'Hiramson Normil — QA Automation Engineer and Software Engineer, combining test automation with Node.js and PHP development.';
+            }
+
+            fetch('https://ipapi.co/json/', { signal: AbortSignal.timeout(3000) })
+                .then(function (response) { return response.ok ? response.json() : Promise.reject(); })
+                .then(function (location) {
+                    if (location.country_code && location.country_code.toUpperCase() !== 'BR') applyEnglish();
+                })
+                .catch(function () {
+                    // Portuguese is the resilient default when geolocation is unavailable.
+                });
+        })();
     </script>
 
 </body>
